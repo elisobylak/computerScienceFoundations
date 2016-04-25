@@ -1,0 +1,27 @@
+/**
+The Car class is meant to illustrate 
+a simple class
+ */
+
+
+public class Car {
+    String color;
+    String make;
+    int year;
+
+    public void setColor(String c) {
+ color = c;
+    }
+
+    public String getColor() {
+ return color;
+    }
+
+    public static void main(String[] args){
+ Car myCar = new Car();
+ myCar.setColor("blue");
+
+ String color = myCar.getColor();
+ System.out.println("The color is " + color);
+    }
+}

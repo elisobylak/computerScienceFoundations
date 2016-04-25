@@ -1,0 +1,16 @@
+import java.until.*;
+
+public class WordLines
+{
+  public static void main(String[] args)
+  {
+    System.out.println("Enter a string of text:");
+    Scanner sc = new Scanner(System.in);
+    String lines = sc.nextInt();
+    
+    String[] words = lines.split(" ");  
+    
+    for (String word : words)  
+    {  
+      System.out.println(word);  
+    } 

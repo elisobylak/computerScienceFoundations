@@ -1,0 +1,15 @@
+  import java.awt.*;
+  import javax.swing.*;
+  
+  public  class BabyGraphics{
+  
+    public static void main(String[] args){
+      JFrame frame = new JFrame("Air-Map");
+      Container c = frame.getContentPane();
+     JPanel p = new JPanel();
+     c.add(p); // add panel to frame's container
+     frame.pack(); // prepares frame for display
+     frame.setVisible(true);
+     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+   }
+ }

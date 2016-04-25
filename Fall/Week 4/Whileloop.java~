@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Whileloop
+{
+        public static void main(String[] args)
+        {
+                int rows = 7;
+      String stars = "";
+      for (int i=0; i<rows; i++) {
+         System.out.println(i);
+         System.out.println(stars);
+         stars += "*";
+      }
+   }
+}  
+      

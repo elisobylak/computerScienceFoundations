@@ -1,0 +1,154 @@
+//package airport;
+
+
+import java.util.*;
+import java.io.*;
+
+
+/**
+ * This keeps track of relevant information about an airport.
+ * It includes Flights arriving and departing. 
+ * This version uses two separate ArrayLists. <br>
+ * 
+ * reads in the files with load
+ *
+ * @author  Richard
+ */
+
+public class Airport {
+
+    /**
+     * 3 letter airport code (IATA)
+     */
+    String name;  
+    /**
+     *  latitude and longitude
+     */
+    float lat, lon;
+    int delay;
+    String city;
+    /**
+     *  inbound flights
+     */
+    ArrayList<Flight> arrivals;
+    /**
+     *  outbound flights
+     */
+    ArrayList<Flight> departures;
+
+    /**
+     *  List of all airports
+     */
+    static ArrayList<Airport> Airports = new ArrayList<Airport>();
+
+
+    /**
+     *  Constructors
+     */
+    public Airport(String cd, float latitude, float longitude, int del, String cty) {
+	name = cd;
+	lat = latitude;
+	lon = longitude;
+	city = cty;
+	System.out.println(name + "->" + lat);
+    }
+
+    /**
+     *   getters
+     */
+    public String name() { return name; }
+    public int delay() { return delay; }
+    public float latitude() { return lat; }
+    public float longitude() { return lon; }
+    /**
+     *  There is a problem with this: another class could modify
+     *  the flights for an airport.
+     * @return a list of flight departing from the airport
+     */
+    public ArrayList<Flight> departures() { return departures; }
+
+    /**
+     * arrivals
+     *  There is a problem with this: another class could modify
+     *  the flights for an airport.
+     * @return a list of flight arriving at the airport
+     */
+
+
+    /**
+     *  add a new flight to one of the lists
+     * @param fl 
+     *  a flight instance to be added
+     */
+    public void addFlight(Flight fl) {
+	
+    }
+
+    /**
+     *  delete a new flight by flight number
+     *  
+     */
+    public void deleteFlight(int fl) {
+	
+    }
+
+    public void addDeparture(Flight flight) {
+      departures.add(flight);
+    }
+    
+    public void showDepartures() {
+      for (Flight dep : departures) {
+        System.out.println("\t" + dep);
+      }
+    }
+    
+    /**
+       toString()
+     */
+    public String toString() {
+	StringBuilder sb = new StringBuilder();
+	sb.append(name);
+	// todo: append more stuff
+	return sb.toString();
+    }
+
+    //--------------------------------------------------
+    // static methods
+
+    public static Airport named(String name) {
+      for (Airport apt : Airports) {
+        if (apt.name().equals(name)) return (apt);
+      }
+      System.out.println("No airport named " + name);
+      return (null);
+    }
+    
+    
+    public static void loadAirports () { 
+      try {
+        Scanner scn = new Scanner(new File("Airports2.csv")).useDelimiter(",\\s*");
+        scn.nextLine();
+        
+        while (scn.hasNext()) {
+          new Airport(scn.next(), scn.nextFloat(), scn.nextFloat(), scn.nextInt(), scn.next());
+        }
+      } catch (Exception ex){ex.printStackTrace();}
+    }   
+    
+    public static void showAirports() {    
+     for(Airport apt : Airports) {
+        System.out.println(apt);
+        apt.showDepartures();
+      }
+    }
+   
+    public static void main (String[] args) { 
+     // Airport apt = new Airport("HKY", 35.742F, -81.39F, 59, "Hickory");
+     // System.out.println(apt);
+      loadAirports();  
+      Flight.loadFlights();
+      //doQueries();
+    }
+
+
+}

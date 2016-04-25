@@ -1,0 +1,29 @@
+/**
+ * Creates a frame and draws a circle and a line
+ */
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.*;
+
+  public class DrawPanel extends JPanel{
+
+      public DrawPanel () {
+   setPreferredSize(new Dimension(500, 500));
+      }
+
+      public void paintComponent(Graphics page) {
+   super.paintComponent(page);
+   
+   
+   page.setColor(Color.blue);
+   for(int a = 0; a < 100; a++) {
+     page.drawRect(a + 250, 250, a, a);
+   }
+   page.drawLine(50, 50, 1000, 100);
+   for(int b = 50; b<100; b++) {
+     page.drawArc(b, b, b, b, b, 360);
+   }
+      }
+
+  }

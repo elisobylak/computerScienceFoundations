@@ -1,0 +1,17 @@
+public class Frames {
+  public static voide main(String[] args) {
+
+JFrame frame = new JFrame("Nested Panels");
+
+      // create the first panel and a label
+      JPanel subPanel_1 = new JPanel();
+      Jlabel label_1 = new JLabel("Hello");
+      subPanel_1.add(label_1);
+
+      // create the second panel and a label
+      JPanel subPanel_2 = new JPanel();
+      JLabel label_2 = new JLabel("World");
+      subPanel_2.add(label_2);
+      
+  }
+}

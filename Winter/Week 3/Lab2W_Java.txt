@@ -1,0 +1,2 @@
+This week was a new step in programming. We tried to generate graphs using Java, and also tried making buttons do things. My team spent all 2 hours of lab this week figuring out that the code we were given didn’t work in the first place. So we did not make substantial progress. Although we were able to play around with the graphing feature, and I was able to make a JButton appear but could not get it to do any specific action. 
+

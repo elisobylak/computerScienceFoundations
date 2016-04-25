@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Fraction { 
+
+        public static void main(String[] args) {
+            Scanner console = new Scanner(System.in); 
+            System.out.println("Enter an integer");
+            int number = console.nextInt();
+            fractionSum(number);
+
+        }
+
+        public static double fractionSum (int a){
+                double sum =0; 
+                for(int i =1; i<=a; i++){ 
+                sum = sum + (1/(double)i);
+                } 
+        return sum; 
+        }
+}

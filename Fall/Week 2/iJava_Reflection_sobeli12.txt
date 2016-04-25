@@ -1,0 +1,7 @@
+Eli Sobylak
+A00317144
+This week has been pretty interesting in iJava. We have gone more in depth regarding the object, class and instance relationship. We did a lot of exercises that asked us to inquire about variables assigned to various kids and children. This was achieved by constructing Age and then using methods like jillsKid.getAge to get the age for jillsKid and then using to System.out.println to print the information.
+I also got to write a program that prints out my information like my name, age,  and height in inches and centimeters. 
+One of the things I am experiencing regarding programming is that there is one answer, but almost infinite ways to get that answer. 
+
+

@@ -1,0 +1,22 @@
+public class DrawHisto {
+    public final int MAX = 21;
+    int[] bins = new int[MAX];
+    
+
+    // Make a histogram of random integers
+    public static void draw(){
+ for (int i=0; i<MAX; i++) {
+     System.out.print(i + ":\t" + bins[i] + " ");
+     for (int jx=1; jx<bins[i]; jx++) {
+  System.out.print("*");
+     }
+     System.out.println("*");
+ }
+    }
+    
+    public static void addNext(int dat) {
+ if (dat < MAX && dat >= 0) {
+     bins[dat]++;
+ }
+    }
+}

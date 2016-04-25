@@ -1,0 +1,8 @@
+open Sesame
+
+Description of steps: I opened up Putty and entered in ada to the domain field.
+After getting into the ada server I used the command cd to follow the path through /var then cd into /www then cd into /programs then cd into /csf then cd /csf1415 then cd/ java14f
+Once here, I used the ls command to list all the contents of this directory 
+Then I had to look up the command to view a document which is cat
+Finally I used the command vi to open the file and view the contents.
+

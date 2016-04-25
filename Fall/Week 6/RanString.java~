@@ -1,0 +1,11 @@
+import java.util.*;
+
+public class RanString
+{
+  public static void main(String[] args)
+  {
+    
+int word = s.length();
+
+int r = ((int)Math.random() * word);
+System.out.println(s.charAt(r));

@@ -1,0 +1,52 @@
+/**
+The Car class is meant to illustrate 
+a simple class
+ */
+
+import java.util.Calendar;
+
+public class Car2 {
+    String color;
+    String make;
+    int year;
+    int thisYear = 2014;  // there is also a Calendar class that will get the current year
+
+    public Car2(int yr) {
+ year = yr;
+    }
+
+    public void setColor(String c) {
+ color = c;
+    }
+
+    public String getColor() {
+ return color;
+    }
+
+    public int getAge() {
+ return thisYear - year;
+    }
+
+    public int getYear() {
+ return year;
+    }
+
+    public void incrementYear() {
+ thisYear = thisYear + 1;  // why don't you say int thisYear = thisYear + 1?
+    }
+
+    public static void main(String[] args){
+ Car2 myCar = new Car2(2008);
+ myCar.setColor("blue");
+ String color = myCar.getColor();
+
+ // todo: print the color of myCar
+
+ // todo:  add 1 to myCar.thisYear
+
+ // todo: get and print the year of myCar
+
+ // todo: get and print the age of myCar in 2015
+
+    }
+}

@@ -1,0 +1,12 @@
+public class Param
+{
+  public static void main(String[] args)
+  {
+         int x = 3;
+         int y = add1(x);
+     }
+
+      static int add1(x) {
+         x += 1;
+         return x;
+      }
